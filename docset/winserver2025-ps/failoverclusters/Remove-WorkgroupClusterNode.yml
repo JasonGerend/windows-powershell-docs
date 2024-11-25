@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a node from a workgroup cluster.
+module: FailoverClusters
+notes: ""
+links:
+- text: Add-WorkgroupClusterNode
+  href: add-workgroupclusternode.yml
+- text: Clear-ClusterNode
+  href: clear-clusternode.yml
+- text: New-WorkgroupCluster
+  href: new-workgroupcluster.yml
+- text: Remove-WorkgroupCluster
+  href: remove-workgroupcluster.yml
+- text: Set-WorkgroupClusterRemotingConfiguration
+  href: set-workgroupclusterremotingconfiguration.yml
+- text: Test-WorkgroupCluster
+  href: test-workgroupcluster.yml
+- text: Test-WorkgroupClusterRemoting
+  href: test-workgroupclusterremoting.yml
+syntaxes:
+- >-
+  Remove-WorkgroupClusterNode [-Node] <String[]> [-Credentials] <PSCredential[]> [-Name] <String>
+   [[-Wait] <Int32>] [-IgnoreStorageConnectivityLoss] [-CleanupDisks] [-Force] [-Confirm] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-WorkgroupClusterNode -Node "Node1", "Node2" -Credentials $cred1, $cred2 -Name $Node2
+  description: |-
+    This example removes `Node2` from the cluster membership.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Remove-WorkgroupClusterNode -Node "Node1", "Node2" -Credentials $cred1, $cred2 -Name $Node3
+  description: |-
+    This example removes `Node3` from the cluster membership.
+
+    Manual cleanup may be required to clear the node state by logging into `Node3` and running
+    `Clear-ClusterNode`.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CleanupDisks
+  description: |+
+    Removes any residual cluster metadata from the specified disks. This metadata includes information
+    that the cluster service uses to manage the disks. By cleaning the metadata, the disks are freed
+    from any old cluster configurations, making them available for new clusters or other purposes. This
+    cmdlet may prevent potential conflicts that could arise from leftover metadata when reusing disks.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credentials
+  isRequired: true
+  description: |+
+    An array of credentials for the nodes.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreStorageConnectivityLoss
+  description: |+
+    Indicates that this cmdlet doesn't check whether the cluster node contains non-shared storage, if
+    Storage Spaces Direct is enabled. If you don't specify this parameter, the cmdlet checks whether
+    this node has any Storage Spaces Direct storage. If this cmdlet finds Storage Spaces Direct storage,
+    it prompts you for confirmation before it removes the node.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the node to be removed. If the name isn't included in **Node** parameter, the first
+    node in the **Node** parameter will be used to remove the node. Additional cleanup will be required
+    to clear the node state.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Node
+  isRequired: true
+  description: |+
+    An array of nodes in the workgroup cluster.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+    then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+    the cmdlet returns without waiting.
+
+  defaultValue: "0"
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Remove-WorkgroupClusterNode
+name: Remove-WorkgroupClusterNode
+description: |-
+  The `Remove-WorkgroupCluster` function removes a node from the membership in a workgroup Cluster.
+  The rest of the parameters will be forwarded to the `Remove-ClusterNode` function. Please refer to
+  the documentation for the
+  [Remove-ClusterNode](/powershell/module/failoverclusters/remove-clusternode) cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
+  Module Name: FailoverClusters
+  ms.date: 09/11/2024
+  online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-workgroupclusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Remove-WorkgroupClusterNode

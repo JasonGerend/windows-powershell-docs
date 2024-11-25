@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: DeliveryOptimization
+notes: ""
+links:
+- text: https://aka.ms/do-cmdlets
+  href: https://aka.ms/do-cmdlets
+syntaxes:
+- Set-DOMaxForegroundBandwidth [[-MaxForegroundBandwidth] <UInt32>] [-Reset] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.UInt32" data-throw-if-not-resolved="False" /><span>]</span>
+  name: MaxForegroundBandwidth
+  description: |+
+    {{ Fill MaxForegroundBandwidth Description }}
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Reset
+  description: |+
+    {{ Fill Reset Description }}
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DeliveryOptimization.Set-DOMaxForegroundBandwidth
+name: Set-DOMaxForegroundBandwidth
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: DeliveryOptimizationSettings.psm1-help.xml
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/deliveryoptimization/set-domaxforegroundbandwidth?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Set-DOMaxForegroundBandwidth

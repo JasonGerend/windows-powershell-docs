@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: FailoverClusterSet
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-ClusterSet [-Name] <String> [-NamespaceRoot] <String> [-CimSession <CimSession>]
+   [-ManagementClusterName <String>] [-IgnoreNetwork <String[]>] [-StaticAddress <String[]>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    {{ Fill CimSession Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IgnoreNetwork
+  description: |+
+    {{ Fill IgnoreNetwork Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: ManagementClusterName
+  description: |+
+    {{ Fill ManagementClusterName Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    {{ Fill Name Description }}
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NamespaceRoot
+  isRequired: true
+  description: |+
+    {{ Fill NamespaceRoot Description }}
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StaticAddress
+  description: |+
+    {{ Fill StaticAddress Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusterSet.New-ClusterSet
+name: New-ClusterSet
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: Microsoft.FailoverClusterSet.PowerShell.psm1-help.xml
+  Module Name: FailoverClusterSet
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/failoverclusterset/new-clusterset?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: New-ClusterSet

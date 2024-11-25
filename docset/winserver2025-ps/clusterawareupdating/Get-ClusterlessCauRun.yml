@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves information about a Cluster-Aware Updating (CAU) run not associated with a cluster.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauWmiObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.ClusterAwareUpdating.ClusterlessCauRun" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.ClusterAwareUpdating.RunState" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Invoke-ClusterlessCauRun
+  href: invoke-clusterlesscaurun.yml
+syntaxes:
+- Get-ClusterlessCauRun [-Credential <PSCredential>] [<CommonParameters>]
+- Get-ClusterlessCauRun [-Credential <PSCredential>] [-ShowClusterNodeState] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-ClusterlessCauRun
+  description: |-
+    This example displays information about the current CAU run, including the status of each node that
+    is being updated.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the administrative credentials for the target cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowClusterNodeState
+  description: |+
+    Displays detailed information about the state of each node in the CAU run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Get-ClusterlessCauRun
+name: Get-ClusterlessCauRun
+description: |-
+  The `Get-ClusterlessCauRun` cmdlet retrieves information about a Cluster-Aware Updating (CAU) run
+  that is not associated with a cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 07/01/2024
+  online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-clusterlesscaurun?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Get-ClusterlessCauRun

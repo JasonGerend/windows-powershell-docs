@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: FailoverClusterSet
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/microsoft/windows/cluster/scaleout/MSFT_ClusterSetAvailabilitySet" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Add-ClusterSetParticipantToAvailabilitySet [-AvailabilitySetName] <String[]> -ParticipantName <String[]>
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+- >-
+  Add-ClusterSetParticipantToAvailabilitySet -Id <UInt64[]> -ParticipantName <String[]>
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+- >-
+  Add-ClusterSetParticipantToAvailabilitySet -InputObject <CimInstance[]> -ParticipantName <String[]>
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    {{ Fill AsJob Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AvailabilitySetName
+  isRequired: true
+  description: |+
+    {{ Fill AvailabilitySetName Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    {{ Fill CimSession Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="System.UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Id
+  isRequired: true
+  description: |+
+    {{ Fill Id Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    {{ Fill InputObject Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ParticipantName
+  isRequired: true
+  description: |+
+    {{ Fill ParticipantName Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    {{ Fill PassThru Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    {{ Fill ThrottleLimit Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusterSet.Add-ClusterSetParticipantToAvailabilitySet
+name: Add-ClusterSetParticipantToAvailabilitySet
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: ClusterSetAvailabilitySet.cdxml-help.xml
+  Module Name: FailoverClusterSet
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/failoverclusterset/add-clustersetparticipanttoavailabilityset?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Add-ClusterSetParticipantToAvailabilitySet

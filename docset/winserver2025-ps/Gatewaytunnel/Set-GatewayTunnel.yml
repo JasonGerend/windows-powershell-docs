@@ -1,0 +1,384 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: Gatewaytunnel
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.ProtocolType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.EncryptionType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.IpsecEncryption" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.IpsecIntegrity" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.Pfsgroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.IkeEncryption" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.IkeIntegrity" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.Dhgroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.ConnectReason" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#PS_GatewayTunnel" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-GatewayTunnel [-TunnelName] <String> [[-RoutingDomainName] <String>] [[-LocalIp] <String>]
+   [[-RemoteIp] <String>] [[-TunnelIdentity] <String>] [[-Routes] <String>] [[-LocalExemptRoutes] <String>]
+   [[-RemoteExemptRoutes] <String>] [-LocalSubnets <String>] [-Standby <Boolean>] [-AdminStatus <Boolean>]
+   [-AutoConnectEnabled <Boolean>] [-ProtocolType <ProtocolType>] [-EncryptionType <EncryptionType>]
+   [-IpsecEncryption <IpsecEncryption>] [-IpsecIntegrity <IpsecIntegrity>] [-Pfsgroup <Pfsgroup>]
+   [-IkeEncryption <IkeEncryption>] [-IkeIntegrity <IkeIntegrity>] [-Dhgroup <Dhgroup>]
+   [-MMSALifeTimeInSeconds <UInt32>] [-SALifeTimeInSeconds <UInt32>] [-SALifeKilloBytes <UInt32>]
+   [[-SharedSecret] <String>] [-DpdTimeout <UInt32>] [-UseNarrowTrafficSelectors <Boolean>]
+   [-IsConnectionNATed <Boolean>] [-ConnectReason <ConnectReason>] [-TunnelId <String>]
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: AdminStatus
+  description: |+
+    {{ Fill AdminStatus Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    {{ Fill AsJob Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: AutoConnectEnabled
+  description: |+
+    {{ Fill AutoConnectEnabled Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    {{ Fill CimSession Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.ConnectReason" data-throw-if-not-resolved="False" />
+  name: ConnectReason
+  description: |+
+    {{ Fill ConnectReason Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, ServiceTriggered, DataTriggered, UserTriggered, RemoteTriggered, RemoteCrashTriggered
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.Dhgroup" data-throw-if-not-resolved="False" />
+  name: Dhgroup
+  description: |+
+    {{ Fill Dhgroup Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, DhGroup1, DhGroup2, DhGroup14
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: DpdTimeout
+  description: |+
+    {{ Fill DpdTimeout Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Dpd
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.EncryptionType" data-throw-if-not-resolved="False" />
+  name: EncryptionType
+  description: |+
+    {{ Fill EncryptionType Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoEncryption, StrongEncryption, RequiredEncryption, OptionalEncryption, CustomEncryption
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.IkeEncryption" data-throw-if-not-resolved="False" />
+  name: IkeEncryption
+  description: |+
+    {{ Fill IkeEncryption Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.IkeIntegrity" data-throw-if-not-resolved="False" />
+  name: IkeIntegrity
+  description: |+
+    {{ Fill IkeIntegrity Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: MD5, SHA1, SHA256, SHA384
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.IpsecEncryption" data-throw-if-not-resolved="False" />
+  name: IpsecEncryption
+  description: |+
+    {{ Fill IpsecEncryption Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Encryption
+  parameterValueGroup: DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES192, GCMAES256, None
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.IpsecIntegrity" data-throw-if-not-resolved="False" />
+  name: IpsecIntegrity
+  description: |+
+    {{ Fill IpsecIntegrity Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Auth
+  parameterValueGroup: MD5, SHA1, SHA256, GCMAES128, GCMAES192, GCMAES256
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: IsConnectionNATed
+  description: |+
+    {{ Fill IsConnectionNATed Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LocalExemptRoutes
+  description: |+
+    {{ Fill LocalExemptRoutes Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LocalIp
+  description: |+
+    {{ Fill LocalIp Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: local
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: LocalSubnets
+  description: |+
+    {{ Fill LocalSubnets Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LocalSubnet
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: MMSALifeTimeInSeconds
+  description: |+
+    {{ Fill MMSALifeTimeInSeconds Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: MMSALifeTime
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.Pfsgroup" data-throw-if-not-resolved="False" />
+  name: Pfsgroup
+  description: |+
+    {{ Fill Pfsgroup Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Pfs
+  parameterValueGroup: None, PFS1, PFS2, PFS2048, ECP256, ECP384, MM, PFS24
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayTunnel.ProtocolType" data-throw-if-not-resolved="False" />
+  name: ProtocolType
+  description: |+
+    {{ Fill ProtocolType Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Ikev2, None
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RemoteExemptRoutes
+  description: |+
+    {{ Fill RemoteExemptRoutes Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RemoteIp
+  description: |+
+    {{ Fill RemoteIp Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: remote
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Routes
+  description: |+
+    {{ Fill Routes Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: Route
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RoutingDomainName
+  description: |+
+    {{ Fill RoutingDomainName Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: customer
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: SALifeKilloBytes
+  description: |+
+    {{ Fill SALifeKilloBytes Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SALifeKb
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: SALifeTimeInSeconds
+  description: |+
+    {{ Fill SALifeTimeInSeconds Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SALifeTime
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SharedSecret
+  description: |+
+    {{ Fill SharedSecret Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "7"
+  aliases: Presharedkey
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: Standby
+  description: |+
+    {{ Fill Standby Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    {{ Fill ThrottleLimit Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TunnelId
+  description: |+
+    {{ Fill TunnelId Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: MMProviderContextKey
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TunnelIdentity
+  description: |+
+    {{ Fill TunnelIdentity Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TunnelName
+  isRequired: true
+  description: |+
+    {{ Fill TunnelName Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  name: UseNarrowTrafficSelectors
+  description: |+
+    {{ Fill UseNarrowTrafficSelectors Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Gatewaytunnel.Set-GatewayTunnel
+name: Set-GatewayTunnel
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: GatewaytunnelConfig_v1.0.cdxml-help.xml
+  Module Name: Gatewaytunnel
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/gatewaytunnel/set-gatewaytunnel?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Set-GatewayTunnel

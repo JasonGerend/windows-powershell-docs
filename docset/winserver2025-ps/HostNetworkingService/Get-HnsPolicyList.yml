@@ -1,0 +1,41 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: HostNetworkingService
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-HnsPolicyList [[-Id] <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    {{ Fill Id Description }}
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HostNetworkingService.Get-HnsPolicyList
+name: Get-HnsPolicyList
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: HostNetworkingService-help.xml
+  Module Name: HostNetworkingService
+  ms.date: 02/22/2024
+  online version: https://learn.microsoft.com/powershell/module/hostnetworkingservice/get-hnspolicylist?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Get-HnsPolicyList

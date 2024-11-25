@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: FailoverClusterSet
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/microsoft/windows/cluster/scaleout/MSFT_ClusterSetMember" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Register-ClusterSetMember [<CommonParameters>]
+- >-
+  Register-ClusterSetMember [-InputObject <CimInstance[]>] [-Name] <String> [-CimSession <CimSession[]>]
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    {{ Fill AsJob Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    {{ Fill CimSession Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  description: |+
+    {{ Fill InputObject Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    {{ Fill Name Description }}
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    {{ Fill ThrottleLimit Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusterSet.Register-ClusterSetMember
+name: Register-ClusterSetMember
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: ClusterSet.cdxml-help.xml
+  Module Name: FailoverClusterSet
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/failoverclusterset/register-clustersetmember?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Register-ClusterSetMember

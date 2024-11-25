@@ -1,0 +1,38 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: DeliveryOptimization
+notes: ""
+links:
+- text: https://aka.ms/do-cmdlets
+  href: https://aka.ms/do-cmdlets
+syntaxes:
+- Set-DODownloadMode [-downloadMode] <SettableDownloadMode> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="SettableDownloadMode" data-throw-if-not-resolved="False" />
+  name: downloadMode
+  isRequired: true
+  description: |+
+    {{ Fill downloadMode Description }}
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: CdnOnly, Lan, Internet
+uid: DeliveryOptimization.Set-DODownloadMode
+name: Set-DODownloadMode
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: DeliveryOptimizationSettings.psm1-help.xml
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/deliveryoptimization/set-dodownloadmode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Set-DODownloadMode

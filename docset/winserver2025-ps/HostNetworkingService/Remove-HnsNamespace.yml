@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: HostNetworkingService
+notes: ""
+inputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Remove-HnsNamespace [-InputObjects] <Object[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.Object" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObjects
+  isRequired: true
+  description: |+
+    {{ Fill InputObjects Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HostNetworkingService.Remove-HnsNamespace
+name: Remove-HnsNamespace
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: HostNetworkingService-help.xml
+  Module Name: HostNetworkingService
+  ms.date: 02/22/2024
+  online version: https://learn.microsoft.com/powershell/module/hostnetworkingservice/remove-hnsnamespace?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Remove-HnsNamespace

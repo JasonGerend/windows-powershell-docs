@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: FailoverClusterSet
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/microsoft/windows/cluster/scaleout/MSFT_ClusterSetFaultDomain" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-ClusterSetFaultDomain [-FDName] <String> [-ClusterName <String[]>]
+   -FDType <MSCluster_ClusterSet_FaultDomainType> [-Description <String>] [-CimSession <CimSession[]>]
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    {{ Fill AsJob Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    {{ Fill CimSession Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClusterName
+  description: |+
+    {{ Fill ClusterName Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: MemberCluster
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    {{ Fill Description Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FDName
+  isRequired: true
+  description: |+
+    {{ Fill FDName Description }}
+
+  defaultValue: None
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSCLUSTER.MSFT_ClusterSetFaultDomain.MSCluster_ClusterSet_FaultDomainType" data-throw-if-not-resolved="False" />
+  name: FDType
+  isRequired: true
+  description: |+
+    {{ Fill FDType Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: FaultDomainType
+  parameterValueGroup: Logical
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    {{ Fill ThrottleLimit Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusterSet.New-ClusterSetFaultDomain
+name: New-ClusterSetFaultDomain
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: ClusterSetFaultDomain.cdxml-help.xml
+  Module Name: FailoverClusterSet
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/failoverclusterset/new-clustersetfaultdomain?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: New-ClusterSetFaultDomain

@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: DeliveryOptimization
+notes: ""
+links:
+- text: https://aka.ms/do-cmdlets
+  href: https://aka.ms/do-cmdlets
+syntaxes:
+- >-
+  Delete-DeliveryOptimizationCache [[-FileId] <String>] [-IncludePinnedFiles] [-Force]
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: FileId
+  description: |+
+    {{ Fill FileId Description }}
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    {{ Fill Force Description }}
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludePinnedFiles
+  description: |+
+    {{ Fill IncludePinnedFiles Description }}
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DeliveryOptimization.Delete-DeliveryOptimizationCache
+name: Delete-DeliveryOptimizationCache
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: DeliveryOptimizationSettings.psm1-help.xml
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/deliveryoptimization/delete-deliveryoptimizationcache?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Delete-DeliveryOptimizationCache

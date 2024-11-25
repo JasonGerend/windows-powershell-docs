@@ -1,0 +1,726 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet reports the file paths, file extensions, and processes that cause the highest impact to
+  Microsoft Defender Antivirus scans.
+module: DefenderPerformance
+notes: ""
+syntaxes:
+- >-
+  Get-MpPerformanceReport [-Path] <String> [-TopFiles <Int32>] [-TopScansPerFile <Int32>]
+   [-TopProcessesPerFile <Int32>] [-TopScansPerProcessPerFile <Int32>] [-TopPaths <Int32>]
+   [-TopPathsDepth <Int32>] [-TopScansPerPath <Int32>] [-TopFilesPerPath <Int32>]
+   [-TopScansPerFilePerPath <Int32>] [-TopExtensionsPerPath <Int32>]
+   [-TopScansPerExtensionPerPath <Int32>] [-TopProcessesPerPath <Int32>]
+   [-TopScansPerProcessPerPath <Int32>] [-TopExtensions <Int32>] [-TopScansPerExtension <Int32>]
+   [-TopPathsPerExtension <Int32>] [-TopScansPerPathPerExtension <Int32>]
+   [-TopFilesPerExtension <Int32>] [-TopScansPerFilePerExtension <Int32>]
+   [-TopProcessesPerExtension <Int32>] [-TopScansPerProcessPerExtension <Int32>]
+   [-TopProcesses <Int32>] [-TopScansPerProcess <Int32>] [-TopFilesPerProcess <Int32>]
+   [-TopScansPerFilePerProcess <Int32>] [-TopExtensionsPerProcess <Int32>]
+   [-TopScansPerExtensionPerProcess <Int32>] [-TopPathsPerProcess <Int32>]
+   [-TopScansPerPathPerProcess <Int32>] [-TopScans <Int32>] [-MinDuration <String>]
+   [-MinStartTime <DateTime>] [-MinEndTime <DateTime>] [-MaxStartTime <DateTime>]
+   [-MaxEndTime <DateTime>] [-Overview] [-Raw] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopExtensions:10 -TopProcesses:10 -TopScans:10
+  description: ""
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopExtensions:10 -TopProcesses:10 -TopScans:10 -Raw | ConvertTo-Json
+  description: ""
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10
+  description: ""
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10
+  description: ""
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopScansPerFile:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopProcessesPerFile:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 7
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopProcessesPerFile:3 -TopScansPerProcessPerFile:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 8
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10
+  description: ""
+  summary: ""
+- title: EXAMPLE 9
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopPathsDepth:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 10
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopPathsDepth:3 -TopScansPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 11
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopScansPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 12
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopPathsDepth:3 -TopFilesPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 13
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopFilesPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 14
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopPathsDepth:3 -TopFilesPerPath:3 -TopScansPerFilePerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 15
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopFilesPerPath:3 -TopScansPerFilePerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 16
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopPathsDepth:3 -TopExtensionsPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 17
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopExtensionsPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 18
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopPathsDepth:3 -TopExtensionsPerPath:3 -TopScansPerExtensionPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 19
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopExtensionsPerPath:3 -TopScansPerExtensionPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 20
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopPathsDepth:3 -TopProcessesPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 21
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopProcessesPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 22
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopPathsDepth:3 -TopProcessesPerPath:3 -TopScansPerProcessPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 23
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopPaths:10 -TopProcessesPerPath:3 -TopScansPerProcessPerPath:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 24
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10
+  description: ""
+  summary: ""
+- title: EXAMPLE 25
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopScansPerExtension:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 26
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopPathsPerExtension:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 27
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopPathsPerExtension:3 -TopPathsDepth:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 28
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopPathsPerExtension:3 -TopPathsDepth:3 -TopScansPerPathPerExtension:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 29
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopPathsPerExtension:3 -TopScansPerPathPerExtension:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 30
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopFilesPerExtension:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 31
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopFilesPerExtension:3 -TopScansPerFilePerExtension:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 32
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopProcessesPerExtension:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 33
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopExtensions:10 -TopProcessesPerExtension:3 -TopScansPerProcessPerExtension:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 34
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10
+  description: ""
+  summary: ""
+- title: EXAMPLE 35
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopScansPerProcess:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 36
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopExtensionsPerProcess:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 37
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopExtensionsPerProcess:3 -TopScansPerExtensionPerProcess:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 38
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopFilesPerProcess:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 39
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopFilesPerProcess:3 -TopScansPerFilePerProcess:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 40
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopPathsPerProcess:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 41
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopPathsPerProcess:3 -TopPathsDepth:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 42
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopPathsPerProcess:3 -TopPathsDepth:3 -TopScansPerPathPerProcess:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 43
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopPathsPerProcess:3 -TopScansPerPathPerProcess:3
+  description: ""
+  summary: ""
+- title: EXAMPLE 44
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinStartTime:"5/14/2022 7:01:11 AM" -MaxEndTime:"5/14/2022 7:01:41 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations that both start and end between MinStartTime and
+    MaxEndTime:
+
+- title: EXAMPLE 45
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinEndTime:"5/14/2022 7:01:11 AM" -MaxStartTime:"5/14/2022 7:01:41 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations between MinEndTime and MaxStartTime, possibly partially
+    overlapping this period
+
+- title: EXAMPLE 46
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinStartTime:"5/14/2022 7:01:11 AM" -MaxStartTime:"5/14/2022 7:01:41 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations between MinStartTime and MaxStartTime, possibly partially
+    overlapping this period
+
+- title: EXAMPLE 47
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinStartTime:"5/14/2022 7:01:11 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations that start at MinStartTime or later:
+
+- title: EXAMPLE 48
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MaxStartTime:"5/14/2022 7:01:11 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations that start before or at MaxStartTime:
+
+- title: EXAMPLE 49
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinEndTime:"5/14/2022 7:01:11 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations that end at MinEndTime or later:
+
+- title: EXAMPLE 50
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MaxEndTime:"5/14/2022 7:01:11 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations that end before or at MaxEndTime:
+
+- title: EXAMPLE 51
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MaxStartTime:"5/14/2022 7:01:11 AM" -MinEndTime:"5/14/2022 7:01:41 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations, impacting the current interval, that did not start or end between MaxStartTime and MinEndTime.
+
+- title: EXAMPLE 52
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinStartTime:"5/14/2022 7:00:00 AM" -MaxStartTime:"5/14/2022 7:01:11 AM" -MinEndTime:"5/14/2022 7:01:41 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations, impacting the current interval, that started between MinStartTime and MaxStartTime, and ended later than MinEndTime.
+
+- title: EXAMPLE 53
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MaxStartTime:"5/14/2022 7:01:11 AM" -MinEndTime:"5/14/2022 7:01:41 AM" -MaxEndTime:"5/14/2022 7:02:00 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations, impacting the current interval, that started before MaxStartTime, and ended between MinEndTime and MaxEndTime.
+
+- title: EXAMPLE 54
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinStartTime:"5/14/2022 7:00:00 AM" -MaxStartTime:"5/14/2022 7:01:11 AM" -MinEndTime:"5/14/2022 7:01:41 AM" -MaxEndTime:"5/14/2022 7:02:00 AM"
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations, impacting the current interval, that started between MinStartTime and MaxStartTime, and ended between MinEndTime and MaxEndTime.
+
+- title: EXAMPLE 55
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinStartTime:([DateTime]::FromFileTime(132969744714304340)) -MaxEndTime:([DateTime]::FromFileTime(132969745000971033))
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations that both start and end between MinStartTime and
+    MaxEndTime, using DateTime as raw numbers in FILETIME format, e.g. from -Raw report format:
+
+- title: EXAMPLE 56
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:10 -MinEndTime:([DateTime]::FromFileTime(132969744714304340)) -MaxStartTime:([DateTime]::FromFileTime(132969745000971033))
+  description: ""
+  summary: |+
+    Find top 10 scans with longest durations between MinEndTime and MaxStartTime, possibly partially
+    overlapping this period, using DateTime as raw numbers in FILETIME format, e.g. from -Raw report
+    format:
+
+- title: EXAMPLE 57
+  code: |-
+    Get-MpPerformanceReport -Path:.\Defender-scans.etl [other arguments] -Overview
+  description: ""
+  summary: |+
+    Display a summary or overview of the scans captured in the trace, in addition to the information
+    displayed regularly through other arguments. Output is influenced by time interval arguments
+    MinStartTime and MaxEndTime.
+
+parameters:
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: MaxEndTime
+  description: |+
+    Specifies the maximum end time of scans included in the report.
+    Accepts a valid DateTime.
+
+  defaultValue: '[DateTime]::MaxValue'
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: MaxStartTime
+  description: |+
+    Specifies the maximum start time of scans included in the report. Accepts a valid DateTime.
+
+  defaultValue: '[DateTime]::MaxValue'
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: MinDuration
+  description: |+
+    Specifies the minimum duration of any scans or total scan durations of files, extensions and
+    processes included in the report. Accepts values like '0.1234567sec' or '0.1234ms' or '0.1us' or a
+    valid TimeSpan.
+
+  defaultValue: 0us
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: MinEndTime
+  description: |+
+    Specifies the minimum end time of scans included in the report. Accepts a valid DateTime.
+
+  defaultValue: '[DateTime]::MinValue'
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: MinStartTime
+  description: |+
+    Specifies the minimum start time of scans included in the report. Accepts a valid DateTime.
+
+  defaultValue: '[DateTime]::MinValue'
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Overview
+  description: |+
+    Adds an overview or summary of the scans captured in the trace to the regular output.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the location of Microsoft Defender Antivirus performance recording to analyze.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Raw
+  description: |+
+    Specifies that the output should be machine readable and readily convertible to serialization
+    formats like JSON.
+
+    - Collections and elements are not be formatted.
+    - TimeSpan values are represented as number of 100-nanosecond intervals.
+    - DateTime values are represented as number of 100-nanosecond intervals since January 1, 1601 (UTC).
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopExtensions
+  description: |+
+    Requests a top extensions report and specifies how many top extensions to output, sorted by
+    "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopExtensionsPerPath
+  description: |+
+    Specifies how many top extensions to output for each top path, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopExtensionsPerProcess
+  description: |+
+    Specifies how many top extensions to output for each top process, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopFiles
+  description: |+
+    Requests a top files report and specifies how many top files to output, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopFilesPerExtension
+  description: |+
+    Specifies how many top files to output for each top extension, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopFilesPerPath
+  description: |+
+    Specifies how many top files to output for each top path, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopFilesPerProcess
+  description: |+
+    Specifies how many top files to output for each top process, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopPaths
+  description: |+
+    Requests a top paths report and specifies how many top entries to output, sorted by "Duration". This
+    is called recursively for each directory entry. Scans are grouped hierarchically per folder and
+    sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopPathsDepth
+  description: |+
+    Specifies the maxmimum depth (path-wise) that will be used to group scans when $TopPaths is used.
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopPathsPerExtension
+  description: |+
+    Specifies how many top paths to output for each top extension, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopPathsPerProcess
+  description: |+
+    Specifies how many top paths to output for each top process, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopProcesses
+  description: |+
+    Requests a top processes report and specifies how many top processes to output, sorted by
+    "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopProcessesPerExtension
+  description: |+
+    Specifies how many top processes to output for each top extension, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopProcessesPerFile
+  description: |+
+    Specifies how many top processes to output for each top file, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopProcessesPerPath
+  description: |+
+    Specifies how many top processes to output for each top path, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScans
+  description: |+
+    Requests a top scans report and specifies how many top scans to output, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerExtension
+  description: |+
+    Specifies how many top scans to output for each top extension, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerExtensionPerPath
+  description: |+
+    Specifies how many top scans to output for each top extension for each top path, sorted by
+    "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerExtensionPerProcess
+  description: |+
+    Specifies how many top scans to output for each top extension for each top process, sorted by
+    "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerFile
+  description: |+
+    Specifies how many top scans to output for each top file, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerFilePerExtension
+  description: |+
+    Specifies how many top scans to output for each top file for each top extension, sorted by
+    "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerFilePerPath
+  description: |+
+    Specifies how many top scans to output for each top file for each top path, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerFilePerProcess
+  description: |+
+    Specifies how many top scans to output for each top file for each top process, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerPath
+  description: |+
+    Specifies how many top scans to output for each top path, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerPathPerExtension
+  description: |+
+    Specifies how many top scans to output for each top path for each top extension, sorted by
+    "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerPathPerProcess
+  description: |+
+    Specifies how many top scans to output for each top path for each top process, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerProcess
+  description: |+
+    Specifies how many top scans to output for each top process in the Top Processes report, sorted by
+    "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerProcessPerExtension
+  description: |+
+    Specifies how many top scans to output for each top process for each top extension, sorted by
+    "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerProcessPerFile
+  description: |+
+    Specifies how many top scans to output for each top process for each top file, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: TopScansPerProcessPerPath
+  description: |+
+    Specifies how many top scans to output for each top process for each top path, sorted by "Duration".
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DefenderPerformance.Get-MpPerformanceReport
+name: Get-MpPerformanceReport
+description: |-
+  This cmdlet analyzes a previously collected Microsoft Defender Antivirus performance recording and
+  reports the file paths, file extensions and processes that cause the highest impact to Microsoft
+  Defender Antivirus scans.
+
+  The performance analyzer provides insight into problematic files that could cause performance
+  degradation of Microsoft Defender Antivirus. This tool is provided "AS IS", and is not intended to
+  provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints.
+  Exclusions, if any, should be defined with caution.
+metadata:
+  external help file: MSFT_MpPerformanceRecording.psm1-help.xml
+  Module Name: DefenderPerformance
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/defenderperformance/get-mpperformancereport?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Get-MpPerformanceReport

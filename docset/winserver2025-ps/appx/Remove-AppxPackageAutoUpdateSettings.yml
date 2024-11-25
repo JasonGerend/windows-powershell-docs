@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes settings configured for a particular Windows app.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-AppxPackageAutoUpdateSettings [-PackageFamilyName] <String> [-UseSystemPolicySource] [-AllUsers]
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-AppxPackageAutoUpdateSettings -PackageFullName publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
+  description: |-
+    This example removes the Auto Update and Repair settings for a specific Windows app that has been installed and registered to the signed-in user.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUsers
+  description: |+
+    {{ Fill AllUsers Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PackageFamilyName
+  isRequired: true
+  description: |+
+    {{ Fill PackageFamilyName Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseSystemPolicySource
+  description: |+
+    {{ Fill UseSystemPolicySource Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Remove-AppxPackageAutoUpdateSettings
+name: Remove-AppxPackageAutoUpdateSettings
+description: |-
+  The 'Remove-AppxPackageAutoUpdateSettings' PowerShell cmdlet removes the settings configured for a specific or all installed Windows apps in relation to the Auto Update and Repair settings.
+metadata:
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: appx
+  online version: https://go.microsoft.com/fwlink/?LinkId=246400
+  PlatyPS schema version: 2.0.0
+  title: Remove-AppxPackageAutoUpdateSettings

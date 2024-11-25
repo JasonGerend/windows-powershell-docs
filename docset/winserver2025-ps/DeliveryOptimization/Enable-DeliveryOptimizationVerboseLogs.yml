@@ -1,0 +1,37 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: DeliveryOptimization
+notes: ""
+links:
+- text: https://aka.ms/do-cmdlets
+  href: https://aka.ms/do-cmdlets
+syntaxes:
+- Enable-DeliveryOptimizationVerboseLogs [-Force] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    {{ Fill Force Description }}
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DeliveryOptimization.Enable-DeliveryOptimizationVerboseLogs
+name: Enable-DeliveryOptimizationVerboseLogs
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: DeliveryOptimizationVerboseLogs.psm1-help.xml
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/deliveryoptimization/enable-deliveryoptimizationverboselogs?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Enable-DeliveryOptimizationVerboseLogs

@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: DeliveryOptimization
+notes: ""
+outputs:
+- name: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: https://aka.ms/do-cmdlets
+  href: https://aka.ms/do-cmdlets
+syntaxes:
+- Get-DOPercentageMaxForegroundBandwidth [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+uid: DeliveryOptimization.Get-DOPercentageMaxForegroundBandwidth
+name: Get-DOPercentageMaxForegroundBandwidth
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: DeliveryOptimizationStatus.psm1-help.xml
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/deliveryoptimization/get-dopercentagemaxforegroundbandwidth?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Get-DOPercentageMaxForegroundBandwidth

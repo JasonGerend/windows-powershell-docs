@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet collects a performance recording of Microsoft Defender Antivirus
+  scans.
+module: DefenderPerformance
+notes: ""
+syntaxes:
+- >-
+  New-MpPerformanceRecording -RecordTo <String> [-Session <PSSession[]>] [-WPRPath <String>]
+   [<CommonParameters>]
+- >-
+  New-MpPerformanceRecording -RecordTo <String> -Seconds <Int32> [-Session <PSSession[]>]
+
+  [-WPRPath <String>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    New-MpPerformanceRecording -RecordTo:.\Defender-scans.etl
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: RecordTo
+  isRequired: true
+  description: |+
+    Specifies the location where to save the Microsoft Defender Antivirus performance recording.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Seconds
+  isRequired: true
+  description: |+
+    Specifies the duration of the performance recording in seconds.
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.Runspaces.PSSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Session
+  description: |+
+    Specifies the PSSession object in which to create and save the Microsoft Defender Antivirus
+    performance recording. When you use this parameter, the RecordTo parameter refers to the local path
+    on the remote machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: WPRPath
+  description: |+
+    Optional argument to specifiy a different tool for recording traces. Default is wpr.exe When
+    $Session parameter is used this path represents a location on the remote machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DefenderPerformance.New-MpPerformanceRecording
+name: New-MpPerformanceRecording
+description: |-
+  This cmdlet collects a performance recording of Microsoft Defender Antivirus scans. These
+  performance recordings contain Microsoft-Antimalware-Engine and NT kernel process events and can be
+  analyzed after collection using the Get-MpPerformanceReport cmdlet.
+
+  This cmdlet requires elevated administrator privileges.
+
+  The performance analyzer provides insight into problematic files that could cause performance
+  degradation of Microsoft Defender Antivirus. This tool is provided "AS IS", and is not intended to
+  provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints.
+  Exclusions, if any, should be defined with caution.
+metadata:
+  external help file: MSFT_MpPerformanceRecording.psm1-help.xml
+  Module Name: DefenderPerformance
+  ms.date: 02/21/2024
+  online version: https://learn.microsoft.com/powershell/module/defenderperformance/new-mpperformancerecording?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: New-MpPerformanceRecording

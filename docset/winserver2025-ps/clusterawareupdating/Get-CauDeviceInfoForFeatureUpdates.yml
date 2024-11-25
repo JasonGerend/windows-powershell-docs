@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves device information for feature updates from a specified directory.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.ClusterAwareUpdating.ActivityIdMap" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CauDeviceInfoForFeatureUpdates [[-ClusterName] <String>] [-Credential <PSCredential>]
+   -PathToDirectory <String> [-PathToDeploymentCab <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $parameters = @{
+    ClusterName = "CONTOSO-FC1"
+    PathToDirectory = "C:\Updates" 
+    PathToDeploymentCab = "C:\Deployment\FeatureUpdate.cab"
+    }
+    Get-CauDeviceInfoForFeatureUpdates $parameters
+  description: |-
+    This command retrieves device information for feature updates from the `C:\Updates` directory for
+    the cluster named **CONTOSO-FC1**. It also specifies the path to the deployment cab file that will
+    be created for the update in `C:\Deployment\FeatureUpdate.cab`.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies the name of the cluster on which to create the CAU clustered role. This parameter is only
+    required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to reference
+    a failover cluster different from where the cmdlet is run.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the administrative credentials for the target cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PathToDeploymentCab
+  description: |+
+    Specifies the path to the deployment cab file that will be created for the update.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PathToDirectory
+  isRequired: true
+  description: |+
+    Specifies the path to the directory that contains the device information files. This parameter is
+    required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Get-CauDeviceInfoForFeatureUpdates
+name: Get-CauDeviceInfoForFeatureUpdates
+description: |-
+  The `Get-CauDeviceInfoForFeatureUpdates` cmdlet retrieves device information for feature updates
+  from a specified directory.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 07/01/2024
+  online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-caudeviceinfoforfeatureupdates?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  PlatyPS schema version: 2.0.0
+  title: Get-CauDeviceInfoForFeatureUpdates
