@@ -20,6 +20,7 @@ New-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [[-N
  [[-StaticAddress] <String[]>] [[-IgnoreNetwork] <String[]>]
  [[-ManagementPointNetworkType] <AdminAccessPointResType>]
  [[-AdministrativeAccessPoint] <AdminAccessPoint>] [-NoStorage] [-S2D] [-Force] [-Confirm] [-WhatIf]
+ [-AuthenticationMethod <WorkgroupClusterAuthenticationMethod>]
  [<CommonParameters>]
 ```
 
@@ -254,6 +255,23 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationMethod
+
+Specifies the authentication method for the workgroup cluster.
+
+```yaml
+Type: WorkgroupClusterAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
+Accepted values: Certificates, NoCertificates
+
+Required: True
+Position: 8
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

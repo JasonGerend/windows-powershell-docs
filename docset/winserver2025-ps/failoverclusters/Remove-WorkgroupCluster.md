@@ -16,7 +16,7 @@ Removes a workgroup cluster.
 ## SYNTAX
 
 ```
-Remove-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [-Force] [-Confirm]
+Remove-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [-AuthenticationMethod <WorkgroupClusterAuthenticationMethod>] [-Force] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -66,6 +66,23 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationMethod
+
+Specifies the authentication method for the workgroup cluster.
+
+```yaml
+Type: WorkgroupClusterAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
+Accepted values: Certificates, NoCertificates
+
+Required: True
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -17,7 +17,7 @@ Removes a clustered role, also called a resource group, from a failover cluster.
 
 ```
 Remove-ClusterGroup [-VMId <Guid>] [[-Name] <StringCollection>] [-Force] [-RemoveResources]
- [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InputObject <PSObject>] [-Cluster <String>] [-Reason <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -136,6 +136,22 @@ Aliases:
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reason
+
+Specifies the reason for removing the cluster group.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

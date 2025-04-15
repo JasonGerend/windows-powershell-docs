@@ -19,14 +19,14 @@ Creates a cluster name account in Active Directory Domain Services.
 
 ```
 New-ClusterNameAccount -Name <String> [-Credentials <PSCredential>] [-Domain <String>]
- [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-Cluster <String>] [-ManagementPointNetworkType <AdminAccessPointResType>] [-UpgradeVCOs] [<CommonParameters>]
 ```
 
 ### Credentials
 
 ```
 New-ClusterNameAccount -Name <String> -Credentials <PSCredential> -Domain <String>
- [-Cluster <String>] [<CommonParameters>]
+ [-Cluster <String>] [-ManagementPointNetworkType <AdminAccessPointResType>] [-UpgradeVCOs] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -164,6 +164,36 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementPointNetworkType
+Specifies the network configuration used to determine IP address settings.
+
+```yaml
+Type: Microsoft.FailoverClusters.PowerShell.AdminAccessPointResType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpgradeVCOs
+Specifies whether to upgrade virtual computer objects (VCOs).
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -166,6 +166,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Reason
+Specifies the reason for removing the cluster node.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Wait
 
 Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,

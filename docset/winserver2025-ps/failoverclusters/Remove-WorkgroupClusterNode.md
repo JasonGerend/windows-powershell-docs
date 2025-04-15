@@ -18,7 +18,7 @@ Removes a node from a workgroup cluster.
 ```
 Remove-WorkgroupClusterNode [-Node] <String[]> [-Credentials] <PSCredential[]> [-Name] <String>
  [[-Wait] <Int32>] [-IgnoreStorageConnectivityLoss] [-CleanupDisks] [-Force] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+ [-AuthenticationMethod] <WorkgroupClusterAuthenticationMethod> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -201,6 +201,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationMethod
+Specifies the authentication method for the workgroup cluster node.
+
+```yaml
+Type: WorkgroupClusterAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
+Accepted values: Certificates, NoCertificates
+
+Required: True
+Position: 5
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

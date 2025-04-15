@@ -17,7 +17,7 @@ Removes a dependency between two resources in a clustered role within a failover
 
 ```
 Remove-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>]
- [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf] [-Confirm] [-Reason <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -121,6 +121,21 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reason
+Specifies the reason for removing the cluster resource dependency.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

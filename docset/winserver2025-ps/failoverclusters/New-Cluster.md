@@ -19,7 +19,7 @@ Creates a new failover cluster.
 New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringCollection>]
  [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D]
  [-ManagementPointNetworkType <AdminAccessPointResType>]
- [-AdministrativeAccessPoint <AdminAccessPoint>] [-Force] [<CommonParameters>]
+ [-AdministrativeAccessPoint <AdminAccessPoint>] [-Force] [-Credentials <PSCredential>] [-Domain <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -267,6 +267,36 @@ are always included, but other networks need a static address to be specified us
 
 ```yaml
 Type: StringCollection
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credentials
+Specifies the credentials to use when creating the cluster.
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Domain
+Specifies the domain for the cluster.
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 

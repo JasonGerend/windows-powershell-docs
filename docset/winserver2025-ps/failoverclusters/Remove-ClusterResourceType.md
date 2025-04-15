@@ -104,6 +104,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Reason
+Specifies the reason for removing the cluster resource type.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.

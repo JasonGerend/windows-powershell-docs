@@ -17,7 +17,7 @@ Removes a clustered resource from the failover cluster.
 
 ```
 Remove-ClusterResource [[-Name] <StringCollection>] [-Force] [-InputObject <PSObject>]
- [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Cluster <String>] [-WhatIf] [-Confirm] [-Reason <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,6 +124,22 @@ Aliases:
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reason
+
+Specifies the reason for removing the cluster resource.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
