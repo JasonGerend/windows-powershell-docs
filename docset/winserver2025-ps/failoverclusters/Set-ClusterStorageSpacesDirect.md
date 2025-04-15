@@ -17,7 +17,7 @@ Sets S2D cache parameters.
 
 ```
 Set-ClusterStorageSpacesDirect [-CacheState <CacheStateType>] [-CacheModeHDD <CacheModeType>]
- [-CacheModeSSD <CacheModeType>] [-Nodes <String[]>] [-SkipEligibilityChecks]
+ [-CacheModeSSD <CacheModeType>] [-CacheModeNVMe <CacheModeType>] [-Nodes <String[]>] [-SkipEligibilityChecks]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -91,6 +91,23 @@ Specifies the cache mode of the solid state drive. The acceptable values for thi
 - `ReadOnly`
 - `WriteOnly`
 - `ReadWrite`
+
+```yaml
+Type: CacheModeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: ReadOnly, WriteOnly, ReadWrite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CacheModeNVMe
+
+Specifies the cache mode for NVMe drives. Acceptable values are `ReadOnly`, `WriteOnly`, or `ReadWrite`.
 
 ```yaml
 Type: CacheModeType

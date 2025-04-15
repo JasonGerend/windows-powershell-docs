@@ -31,7 +31,8 @@ Certificates are filtered for those issued by issuers starting with PKU2UAuthori
 ## PARAMETERS
 
 ### -Authority
-Specifies the issuer of the certificates to remove.
+
+Specifies the issuer of the certificates to remove. Default value is `PKU2UAuthority*`.
 
 ```yaml
 Type: String

@@ -206,7 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationMethod
-Specifies the authentication method for the workgroup cluster node.
+
+Specifies the authentication method for the workgroup cluster node. Acceptable values are `Certificates` or `NoCertificates`.
 
 ```yaml
 Type: WorkgroupClusterAuthenticationMethod

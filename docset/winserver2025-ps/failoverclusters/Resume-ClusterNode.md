@@ -17,7 +17,7 @@ Resumes a node from the paused state or brings back drained workloads to the nod
 
 ```
 Resume-ClusterNode [[-Name] <StringCollection>] [[-Failback] <ResumeClusterNodeFailbackType>]
- [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-Cluster <String>] [-Reason <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -131,6 +131,22 @@ Aliases:
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reason
+
+Specifies the reason for resuming the cluster node.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

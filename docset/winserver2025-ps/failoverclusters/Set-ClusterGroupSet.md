@@ -211,6 +211,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StartupDelayTrigger
+
+Specifies the trigger for the startup delay of the group set. Acceptable values are `Online` or `Offline`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If

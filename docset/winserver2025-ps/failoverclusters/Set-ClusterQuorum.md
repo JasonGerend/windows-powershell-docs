@@ -18,7 +18,7 @@ Configures quorum options for a failover cluster.
 ```
 Set-ClusterQuorum [-DiskOnly <String>] [-NoWitness] [-DiskWitness <String>]
  [-FileShareWitness <String>] [-CloudWitness] [-AccountName <String>] [-Endpoint <String>]
- [-AccessKey <String>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+ [-AccessKey <String>] [-InputObject <PSObject>] [-Cluster <String>] [-WitnessType <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -224,6 +224,22 @@ Indicates that the cmdlet sets the cluster quorum to the Node Majority type.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: NodeMajority
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WitnessType
+
+Specifies the type of witness to use for the cluster quorum. Acceptable values are `Disk`, `FileShare`, or `Cloud`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -15,18 +15,12 @@ Enable or disable an affinity rule, and update the rule type.
 
 ## SYNTAX
 
-### Query (cdxml) (Default)
-
 ```
 Set-ClusterAffinityRule [[-Name] <String[]>] [-RuleType <RuleType>] [-Enabled <UInt32>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
-```
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-SoftAntiAffinity <UInt32>] [<CommonParameters>]
 
-### InputObject (cdxml)
-
-```
 Set-ClusterAffinityRule -InputObject <CimInstance[]> [-RuleType <RuleType>] [-Enabled <UInt32>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-SoftAntiAffinity <UInt32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -208,6 +202,25 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftAntiAffinity
+
+Specifies whether the affinity rule is a soft anti-affinity rule. The accepted values for this parameter are:
+
+- `0` or `$false`. The affinity rule is not a soft anti-affinity rule.
+- `1` or `$true`. The affinity rule is a soft anti-affinity rule.
+
+```yaml
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
