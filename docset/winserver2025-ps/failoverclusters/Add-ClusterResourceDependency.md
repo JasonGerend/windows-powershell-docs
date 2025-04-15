@@ -18,7 +18,7 @@ connector, within a failover cluster.
 
 ```
 Add-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>]
- [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-Cluster <String>] [-Reason <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -88,6 +88,21 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reason
+{{ Fill Reason Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

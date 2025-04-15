@@ -17,7 +17,7 @@ Moves a clustered role (a resource group) from one node to another in a failover
 
 ```
 Move-ClusterGroup [[-Name] <String>] [[-Node] <String>] [-IgnoreLocked] [-Wait <Int32>]
- [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+ [-InputObject <PSObject>] [-Cluster <String>] [-IgnoreAffinityRule] [-Reason <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -158,6 +158,36 @@ cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IgnoreAffinityRule
+{{ Fill IgnoreAffinityRule Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reason
+{{ Fill Reason Description }}
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 

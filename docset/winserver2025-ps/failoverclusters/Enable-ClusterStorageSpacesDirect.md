@@ -20,7 +20,9 @@ Enables Storage Spaces Direct on a Fail-Over Cluster.
 ```
 Enable-ClusterStorageSpacesDirect [-PoolFriendlyName <String>] [-Autoconfig <Boolean>]
  [-CacheState <CacheStateType>] [-CacheMetadataReserveBytes <UInt64>]
- [-CachePageSizeKBytes <UInt32>] [-SkipEligibilityChecks] [-CimSession <CimSession[]>]
+ [-CachePageSizeKBytes <UInt32>] [-SkipEligibilityChecks] [-CollectPerformanceHistory <Boolean>]
+ [-BusTypesToUse <Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSCLUSTER.MSCluster_StorageSpacesDirect.S2DBusType[]>]
+ [-SedProtectionState <Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSCLUSTER.MSCluster_StorageSpacesDirect.SedProtectionStateType>] [-UseSedExclusively <Boolean>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -102,6 +104,21 @@ but created manually, you should set **AutoConfig** to false.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BusTypesToUse
+{{ Fill BusTypesToUse Description }}
+
+```yaml
+Type: Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSCLUSTER.MSCluster_StorageSpacesDirect.S2DBusType[]
 Parameter Sets: (All)
 Aliases:
 
@@ -200,6 +217,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CollectPerformanceHistory
+{{ Fill CollectPerformanceHistory Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
@@ -222,6 +254,21 @@ Specifies the friendly name of the Storage Spaces Direct pool when it is created
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SedProtectionState
+{{ Fill SedProtectionState Description }}
+
+```yaml
+Type: Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSCLUSTER.MSCluster_StorageSpacesDirect.SedProtectionStateType
 Parameter Sets: (All)
 Aliases:
 
@@ -258,6 +305,21 @@ computer.
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseSedExclusively
+{{ Fill UseSedExclusively Description }}
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 

@@ -17,7 +17,7 @@ Adds a node (server) to a failover cluster.
 
 ```
 Add-ClusterNode [[-Name] <StringCollection>] [-NoStorage] [-InputObject <PSObject>]
- [-Cluster <String>] [<CommonParameters>]
+ [-Cluster <String>] [-Type <Microsoft.FailoverClusters.PowerShell.NodeType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,6 +110,21 @@ from the `Get-ClusterAvailableDisk` cmdlet into the `Add-ClusterDisk` cmdlet.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+{{ Fill Type Description }}
+
+```yaml
+Type: Microsoft.FailoverClusters.PowerShell.NodeType
 Parameter Sets: (All)
 Aliases:
 

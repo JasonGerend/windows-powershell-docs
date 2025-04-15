@@ -16,9 +16,9 @@ Creates a log file for all nodes, or a specific a node, in a failover cluster.
 ## SYNTAX
 
 ```
-Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-TimeSpan <UInt32>]
- [-UseLocalTime] [-SkipClusterState] [-Health] [-InputObject <PSObject>] [-Cluster <String>]
- [<CommonParameters>]
+Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-PerformanceHistoryTimeFrame <String>]
+ [-TimeSpan <UInt32>] [-UseLocalTime] [-SkipClusterState] [-Health] [-InputObject <PSObject>] [-Cluster <String>]
+ [-NoCollateLogs] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -186,6 +186,36 @@ uses Greenwich Mean Time (GMT).
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: lt
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PerformanceHistoryTimeFrame
+{{ Fill PerformanceHistoryTimeFrame Description }}
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoCollateLogs
+{{ Fill NoCollateLogs Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

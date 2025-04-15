@@ -16,7 +16,7 @@ Moves a Cluster Shared Volume (CSV) to ownership by a different node in a failov
 ## SYNTAX
 
 ```
-Move-ClusterSharedVolume [[-Name] <String>] [[-Node] <String>] [-Wait <Int32>]
+Move-ClusterSharedVolume [[-Name] <String>] [[-Node] <String>] [-Reason <String>] [-Wait <Int32>]
  [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
@@ -123,6 +123,21 @@ cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reason
+{{ Fill Reason Description }}
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 

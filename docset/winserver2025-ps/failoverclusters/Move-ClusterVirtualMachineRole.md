@@ -17,7 +17,7 @@ Moves the ownership of a clustered virtual machine to a different node.
 
 ```
 Move-ClusterVirtualMachineRole [[-Name] <String>] [[-Node] <String>] [-Cancel]
- [-MigrationType <VmMigrationType>] [-IgnoreLocked] [-VMId <Guid>] [-Wait <Int32>]
+ [-MigrationType <VmMigrationType>] [-IgnoreLocked] [-IgnoreAffinityRule] [-VMId <Guid>] [-Wait <Int32>]
  [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
@@ -236,6 +236,21 @@ cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IgnoreAffinityRule
+{{ Fill IgnoreAffinityRule Description }}
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
